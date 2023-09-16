@@ -8,9 +8,9 @@ public:
         }
 
         for(int i=0;i<arr.size();i++){
-            lsum+=arr[i];
-            if(rsum==lsum) return i;
             rsum-=arr[i];
+            if(rsum==lsum) return i;
+            lsum+=arr[i];
         }
 
         return -1;
