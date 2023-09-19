@@ -4,10 +4,7 @@ public:
         if(l>=r) return l;
         int m = l+(r-l)/2;
 
-        if(arr[m-1]<arr[m] && arr[m]>arr[m+1]){
-            return m;
-        }
-        else if(arr[m] < arr[m+1]){
+        if(arr[m] < arr[m+1]){
             return peek(arr, m+1, r);
         }else{
             return peek(arr, l, m);
